@@ -1,6 +1,7 @@
 button {
     border-radius: 12px;
-    background-color: blue;
+    background-color: rgb(70, 77, 180);
+    color:cornsilk;
     height: 18px;
 };
 
