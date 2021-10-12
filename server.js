@@ -32,7 +32,7 @@ app.use(rollbar.errorHandler());
 
 const port = process.env.PORT || 4400
 
-app.listen(4400, () => {
+app.listen(port, () => {
     console.log(`Server is running on ${port}!`)
 });
 
