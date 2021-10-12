@@ -12,7 +12,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/style', express.static(path.join(__dirname, './public/styles.css')))
+app.use('/style', express.static(path.join(__dirname,'./public/styles.css')))
 
 app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'))
@@ -25,11 +25,6 @@ app.post('/api/student', (req, res) => {
     let { name } = req.body
     name = name.trim()
 
-    students.push(name)
-
-    rollbar.log('student added successfully', {author: 'Jon', type: 'manual entry'})
-
-    res.status(200).send(students)
 })
 
 app.use(rollbar.errorHandler());
